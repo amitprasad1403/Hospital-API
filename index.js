@@ -15,6 +15,7 @@ app.use(express.urlencoded({
   }));
 
 // ****** Redirecting Routes ****** //
+app.get("/", (req, res) => res.send("Hello"));
 app.use('/', require('./routes'));
 
 app.listen(port, function (err) {
